@@ -36,6 +36,7 @@ class ProductViewModel(application: Application, var argument: Bundle) : Android
     fun getTreeBundle(tree: Tree): Bundle {
         return bundleOf("tree" to tree)
     }
+
 }
 
 class ProductViewModelFactory(var application: Application, var argument: Bundle): ViewModelProvider.Factory{
