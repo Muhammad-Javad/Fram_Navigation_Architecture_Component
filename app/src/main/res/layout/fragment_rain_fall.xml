@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true"
+    tools:context=".ui.fragment.rainfall.RainFallFragment">
+
+    <ImageView
+        android:id="@+id/imageview_rainfall_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_rainfall_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_all_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_rainfall_title"
+        tools:itemCount="@integer/int_item_count_8"
+        tools:listitem="@layout/item_all_info" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingactionbutton_rainfall_next"
+        android:layout_width="@dimen/size_all_fab_size"
+        android:layout_height="@dimen/size_all_fab_size"
+        app:fabCustomSize="@dimen/size_all_fab_size"
+        android:layout_marginEnd="@dimen/margin_all_8dp"
+        android:layout_marginBottom="@dimen/margin_all_8dp"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_forward_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/floatingactionbutton_rainfall_back"-->
+<!--        android:layout_width="@dimen/size_all_fab_size"-->
+<!--        android:layout_height="@dimen/size_all_fab_size"-->
+<!--        app:fabCustomSize="@dimen/size_all_fab_size"-->
+<!--        android:layout_marginStart="@dimen/margin_all_8dp"-->
+<!--        android:layout_marginBottom="@dimen/margin_all_8dp"-->
+<!--        android:clickable="true"-->
+<!--        android:src="@drawable/ic_arrow_back_black_24dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:rippleColor="@color/white" />-->
+
+    <TextView
+        android:id="@+id/textview_rainfall_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_all_5dp"
+        android:layout_marginEnd="@dimen/margin_all_8dp"
+        android:textColor="@color/text_color_rainfall_orange"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

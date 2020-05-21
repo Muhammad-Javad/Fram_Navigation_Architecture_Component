@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name"> آب و هواشناسی کشاورزی</string>
+    <string name="label_main_category_description">یکی از موارد زیر را برای تعیین کردن محصول کشاورزی کلیک کنید </string>
+    <string name="text_main_farm">محصول زراعی</string>
+    <string name="text_main_tree">درخت</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--rice-->
+    <string name="title_rainfall_rice_rainfall_value">مقدار بارندگی سالیانه</string>
+    <string name="title_temperature_rice_temperature_value">نوسان دما حین کشت</string>
+    <string name="title_humidity_rice_humidity_value">میانگین رطوبت سالیانه</string>
+
+    <!--wheat-->
+    <string name="title_rainfall_wheat_rainfall_value">مقدار بارندگی سالیانه</string>
+    <string name="title_temperature_wheat_temperature_value">نوسان دما سالیانه</string>
+    <string name="title_humidity_wheat_humidity_value">میانگین رطوبت سالیانه</string>
+
+    <!--straberry-->
+    <string name="title_rainfall_straberry_rainfall_value">مقدار بارندگی سالیانه</string>
+    <string name="title_temperature_straberry_temperature_value">نوسان دما حین کشت</string>
+    <string name="title_humidity_straberry_humidity_value">میانگین رطوبت سالیانه</string>
+
+    <!--orange-->
+    <string name="title_rainfall_orange_rainfall_value">مقدار بارندگی سالیانه</string>
+    <string name="title_temperature_orange_temperature_value">نوسان دما حین کشت</string>
+    <string name="title_humidity_orange_humidity_value">میانگین رطوبت سالیانه</string>
+
+</resources>

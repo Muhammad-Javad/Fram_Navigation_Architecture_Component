@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.javadsh98.fram.ui.fragment.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFragment_to_productFragment"
+            app:destination="@id/productFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.javadsh98.fram.ui.fragment.product.ProductFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_rainFallFragment"
+            app:destination="@id/rainFallFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/rainFallFragment"
+        android:name="com.javadsh98.fram.ui.fragment.rainfall.RainFallFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_rain_fall" >
+        <action
+            android:id="@+id/action_rainFallFragment_to_temperatureFragment"
+            app:destination="@id/temperatureFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="farm"
+            app:argType="com.javadsh98.database.room.entity.Farm"
+            app:nullable="true" />
+        <argument
+            android:name="tree"
+            app:argType="com.javadsh98.database.room.entity.Tree"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/temperatureFragment"
+        android:name="com.javadsh98.fram.ui.fragment.temperature.TemperatureFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_temperature" >
+        <action
+            android:id="@+id/action_temperatureFragment_to_humidityFragment"
+            app:destination="@id/humidityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="farm"
+            app:argType="com.javadsh98.database.room.entity.Farm"
+            app:nullable="true" />
+        <argument
+            android:name="tree"
+            app:argType="com.javadsh98.database.room.entity.Tree"
+            app:nullable="true" />
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/humidityFragment"
+        android:name="com.javadsh98.fram.ui.fragment.humidity.HumidityFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_humidity" >
+        <action
+            android:id="@+id/action_humidityFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="farm"
+            app:argType="com.javadsh98.database.room.entity.Farm"
+            app:nullable="true" />
+        <argument
+            android:name="tree"
+            app:argType="com.javadsh98.database.room.entity.Tree"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.javadsh98.fram.ui.fragment.ResultFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="farm"
+            app:argType="com.javadsh98.database.room.entity.Farm"
+            app:nullable="true" />
+        <argument
+            android:name="tree"
+            app:argType="com.javadsh98.database.room.entity.Tree"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

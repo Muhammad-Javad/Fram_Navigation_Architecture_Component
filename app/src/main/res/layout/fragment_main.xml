@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.MainFragment"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/textview_main_category_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_main_category_description"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_farm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/button_main_farm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bck_all_ripple"
+        android:paddingLeft="@dimen/padding_all_10dp"
+        android:paddingRight="@dimen/padding_all_10dp"
+        android:text="@string/text_main_farm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_all_16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_tree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_main_category_description" />
+
+    <Button
+        android:id="@+id/button_main_tree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bck_all_ripple"
+        android:paddingLeft="@dimen/padding_all_10dp"
+        android:paddingRight="@dimen/padding_all_10dp"
+        android:text="@string/text_main_tree"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_all_16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_farm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

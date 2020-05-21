@@ -1,0 +1,3 @@
+rootProject.name='Fram'
+include ':app'
+include ':database'
